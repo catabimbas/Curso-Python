@@ -1,6 +1,0 @@
-res = input('Digite um valor: ')
-print('O valor é de números: {}'.format(res.isnumeric()))
-print('O valor é de letras: {}'.format(res.isalpha()))
-print('O valor é tem números e letras: {}'.format(res.isalnum()))
-print('O valor tem letras maiúsculas: {}'.format(res.isupper()))
-print('O valor tem letras minúsculas: {}'.format(res.islower()))
