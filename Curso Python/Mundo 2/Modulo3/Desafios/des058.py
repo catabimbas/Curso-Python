@@ -1,14 +1,12 @@
-# Importação
-from math import factorial
-# Variável int
-fatorial = int(input('Digite um valor: '))
-# Variáveis
-rep = fatorial
-fatorial = factorial(fatorial)
-# Repetição
-while rep != 1:
-    print(f'{rep}', end='x')
-    rep -= 1
-# Print
-print(f'{rep}',end='')
-print(f' = {fatorial}')
+from random import randint
+player = int(input('Tente adivinha qual o número o computador sorteou entre 1 e 10: '))
+CPU = randint(1, 10)
+tentativas = 0
+while player != CPU:
+    player = int(input('Você errou, tente novamente: '))
+    tentativas += 1
+print('Você acertou')
+if tentativas == 0:
+    print('Você acertou de primeira')
+else:
+    print(f'Você repetiu {tentativas} vezes até acerta o número sorteado')

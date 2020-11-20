@@ -1,38 +1,24 @@
-# Variáveis
-preco_total = preco_menor = preco_mil = c = 0
-nome_menor = ''
-# Repetições while
+import random
+numPI = vitoria = 0
+parOuImpar = piPc = ''
 while True:
-    # Front
-    produto = str(input('Nome do produto: '))
-    preco = float(input('Preço: R$'))
-    # Inseri os primeiros valores
-    while c != 1:
-        preco_maior = preco_menor = preco
-        c += 1
-    # Faz a correção caso o vendedor tenha digitado errado
-    pergunta = str(input('Que continuar? [S/N]').upper())
-    while True:
-        if pergunta == 'S' or pergunta == 'N':
-            break
-        else:
-            pergunta = str(input('Que continuar? [S/N]').upper())
-    # Back
-    # Preco Adicionais
-    if preco >= 1000.00:
-        preco_mil += 1
-    # Preço menor
-    preco_total += preco
-    if preco_menor > preco:
-        preco_menor = preco
-        nome_menor = produto
-    # Confirmação
-    if c == 1 and pergunta == 'N':
-        nome_menor = produto
+    numPI = int(input('Qual o seu número? '))
+    parOuImpar = str(input('Par ou Impar? [P/I] ').upper())
+    numPC = random.randint(1, numPI)
+    res = numPI + numPC
+    if parOuImpar == 'P':
+        piPc = 'I'
+    elif parOuImpar == 'I':
+        piPc = 'P'
+    if res % 2 == 0 and parOuImpar == 'P':
+        vitoria += 1
+        piPc = 'I'
+        print('Você ganhou!')
+    elif res % 2 == 1 and parOuImpar == 'I':
+        vitoria += 1
+    else:
+        print('Você perdeu!')
+        print(f'O computador escolheu {piPc} e você escolheu {parOuImpar} e no total, deu {res}')
         break
-    elif pergunta == 'N':
-        break
-# Print
-print(f'''O Total foi R${preco_total:.2f}
-Tem {preco_mil} produtos custando mais de R$1000.00
-O produto mais barato foi {nome_menor} que custa R${preco_menor:.2f}''')
+    print(f'O computador escolheu {piPc} e você escolheu {parOuImpar} e no total, deu {res}')
+print(f'O total de vitórias foram de {vitoria} vitórias consecutivas')

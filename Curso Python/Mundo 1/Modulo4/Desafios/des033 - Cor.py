@@ -1,13 +1,27 @@
-# Variáveis float
-n1 = float(input('Digite um valor: '))
-n2 = float(input('Digite outro valor: '))
-n3 = float(input('Digite outro valor: '))
+# Variáveis int
+num1 = int(input('Digite um número: '))
+num2 = int(input('Digite outro número: '))
+num3 = int(input('Digite outro número: '))
 # Cores
 cor = {'fim': '\033[m',
-       'azul': '\033[34m',
+       'amarelo': '\033[33m',
        'vermelho': '\033[31m'}
 # IFS
-if n1 < n2 + n3 and n2 < n1 + n3 and n3 < n1 + n2:
-    print(f'{cor["azul"]}Forma um triângulo{cor["fim"]}')
+# Maiores
+if num1 > num2:
+    if num1 > num3:
+        print(f'{cor["amarelo"]}1º Valor é maior{cor["fim"]}')
 else:
-    print(f'{cor["vermelho"]}Não forma um triângulo{cor["fim"]}')
+    if num2 > num3:
+        print(f'{cor["amarelo"]}2º Valor é maior{cor["fim"]}')
+    else:
+        print(f'{cor["amarelo"]}3º Valor é maior{cor["fim"]}')
+# Menores
+if num1 < num2:
+    if num1 < num3:
+        print(f'{cor["vermelho"]}1º Valor é menor{cor["fim"]}')
+else:
+    if num2 < num3:
+        print(f'{cor["vermelho"]}2º Valor é menor{cor["fim"]}')
+    else:
+        print(f'{cor["vermelho"]}3º Valor é menor{cor["fim"]}')

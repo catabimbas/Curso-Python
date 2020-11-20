@@ -1,14 +1,24 @@
-# Variável string
-polindromo = str(input('Digite uma frase: '))
-# Variáveis
-palavras = polindromo.split()
-junto = ''.join(polindromo)
-inverso = ''
-# Repetição
-for letra in range(len(junto) -1, -1, -1):
-    inverso += junto[letra]
-# IF
-if inverso.capitalize() != junto.capitalize():
-    print('Ele não é polindromo')
-else:
-    print('Ele é polindromo')
+# Meu Código
+"""
+# Variáveis int
+PA = int(input('Digite um valor: '))
+razao = int(input('Digite uma razão: '))
+# Repetições
+for c in range(0,10):
+    print(f'{PA} ->', end=' ')
+    PA = PA + razao
+# Print
+print('Acabou!')
+"""
+# Código do curso
+
+# Variáveis int
+PA = int(input('Digite um valor: '))
+razao = int(input('Digite uma razão: '))
+# Variável
+decimo = PA + (10 - 1) * razao
+# Repetições
+for c in range(PA, decimo+razao, razao):
+    print(f'{c} ', end='-> ')
+# Print
+print('Acabou!')

@@ -1,13 +1,14 @@
 # Variável int
-ano = int(input('Digite o ano: '))
+numeroIP = int(input('Digite um número: '))
 # Variável
-anonovo = ano % 4
+numeroT = numeroIP / 2
 # Cores
 cor = {'fim': '\033[m',
-       'roxo': '\033[35m',
        'branco': '\033[30m'}
 # IFS Print
-if anonovo == 0:
-    print(f'{cor["branco"]}Este ano é bissexto {cor["fim"]}')
+if numeroT % 1:
+    # Print
+    print(f'O número digitado é {cor["branco"]}impar{cor["fim"]}')
 else:
-    print(f'{cor["roxo"]}Este ano não é bissexto {cor["fim"]}')
+    # Print
+    print(f'O número digitado é {cor["branco"]}par{cor["fim"]}')

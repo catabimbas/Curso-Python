@@ -1,12 +1,10 @@
 # Variáveis int
-nota1 = float(input('Digite a primeira nota: '))
-nota2 = float(input('Digite a segunda nota: '))
-# Variável
-media = nota1 / nota2
+num1 = int(input('Digite um valor: '))
+num2 = int(input('Digite outro valor: '))
 # IFS Print
-if media > 5.0:
-    print('Reprovado')
-elif 6.9 > media > 5.0:
-    print('Recuperação')
+if num1 > num2:
+    print('1º Valor é maior que o 2º valor')
+elif num1 < num2:
+    print('2º Valor é maior que o 1º valor')
 else:
-    print('Aprovado')
+    print('Não existe valor maior ou menor, os dois valores são iguais')

@@ -1,14 +1,17 @@
-peso = float(input('Qual o seu peso atual? '))
-altura = float(input('Qual a sua altura atual? '))
-IMC = peso / (altura * altura)
-if IMC < 18.5:
-    print("Você está abaixo do peso")
-elif 18.5 < IMC < 25:
-    print('Você está no peso ideal')
-elif 25 < IMC < 30:
-    print('Você está Sobrepeso')
-elif 30 < IMC < 40:
-    print('Você esta na Obesidade')
+# Variável
+idade = int(input('Digite o ano de nascimento: '))
+# Variáveis
+classificacao = ['Mirim', 'Infantil', 'Junior', 'Sênior', 'Master']
+idade = 2020 - idade
+# IFS
+if idade < 9:
+    print(f"A sua categoria: {classificacao[0]}")
+elif 9 < idade <= 14:
+    print(f"A sua categoria: {classificacao[1]}")
+elif 15 <= idade < 19:
+    print(f"A sua categoria: {classificacao[2]}")
+elif 19 <= idade < 20:
+    print(f"A sua categoria: {classificacao[3]}")
 else:
-    print('Obesidade mórbida')
+    print(f"A sua categoria: {classificacao[4]}")
 

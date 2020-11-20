@@ -1,15 +1,16 @@
-# Variáveis
-maiores = 0
-menores = 0
+# Variável int
+num = int(input('Digite um número: '))
+# Variável
+analisa_primo = 0
 # Repetição
-for c in range(1,8):
-    ano_Nascimento = int(input('Digite o ano de nascimento: '))
-    ano_Nascimento = 2020 - ano_Nascimento
+for c in range(1,num+1):
+    print(c, end=' ')
     # IF
-    if ano_Nascimento > 21:
-        maiores += 1
-    else:
-        menores += 1
+    if num % c == 0:
+        analisa_primo += 1
 # Print
-print(f'''{maiores} pessoas não tem a idade de amadurecimento
-{menores} pessoas já são maiores''')
+print(f'\nO número {num} foi dividido {analisa_primo} vezes')
+if analisa_primo <= 2:
+    print('E por isso ele é Primo!')
+else:
+    print('E por isso ele não é Primo!')

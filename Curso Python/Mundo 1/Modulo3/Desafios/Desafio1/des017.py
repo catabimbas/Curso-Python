@@ -1,8 +1,17 @@
-from random import choice
-n1 = str(input('Primeiro aluno: '))
-n2 = str(input('Segundo aluno: '))
-n3 = str(input('Terceiro aluno: '))
-n4 = str(input('Quarto aluno: '))
-lista = [n1, n2, n3, n4]
-escolhido = choice(lista)
-print(escolhido)
+# Meu código
+"""
+from math import sqrt
+co = float(input('Digite um valor pro cateto oposto: '))
+ca = float(input('Digite um valor pro cateto adjacente: '))
+co2 = co * co
+ca2 = ca * ca
+rqm = (ca2 + co2)
+rq = sqrt(rqm)
+print("O valor da hipotenusa é de {:.2f}".format(rq))
+"""
+# Código do curso
+from math import hypot
+co = float(input('Comprimento do cateto oposto: '))
+ca = float(input('Comprimento do cateto adjacente'))
+h1 = hypot(co, ca)
+print('A hipotenusa vai medir {:.2f}'.format(h1))

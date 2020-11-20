@@ -1,8 +1,7 @@
-from random import sample
-n1 = str(input('Primeiro aluno: '))
-n2 = str(input('Segundo aluno: '))
-n3 = str(input('Terceiro aluno: '))
-n4 = str(input('Quarto aluno: '))
-lista = [n1, n2, n3, n4]
-escolhido = sample(lista, 4)
-print('Os sorteados para apresentarem os trabalhos \n{}: Primeiro \n{}: Segundo \n{}: Terceiro\n{}: Quarto'.format(escolhido[0], escolhido[1], escolhido[2], escolhido[3]))
+# Código do curso
+from math import cos, sin, tan, radians
+angulo = float(input('Digite um ângulo: '))
+angulocos = cos(radians(angulo))
+angulosen = sin(radians(angulo))
+angulotan = tan(radians(angulo))
+print('O ângulo de {} tem o Seno de {:.2f}\nO ângulo de {} tem o Cosseno de {:.2f}\nO ângulo de {} tem o Tangente de {:.2f}'.format(angulo, angulosen, angulo, angulocos, angulo, angulotan))

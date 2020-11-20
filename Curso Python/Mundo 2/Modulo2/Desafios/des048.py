@@ -1,10 +1,11 @@
 # Variável
 soma = 0
+cont = 0
 # Repetição
-for c in range(1, 7):
-    num = int(input('Digite um número: '))
+for c in range(1,501, 2):
     # IF
-    if num % 2 == 0:
-        soma += num
+    if c % 3 == 0:
+        cont += 1
+        soma = soma + c
 # Print
-print(f'O valor somado é igual a {soma}')
+print(f'A soma de todos os valores solicitados é {soma} e teve {cont} números contados')

@@ -1,8 +1,13 @@
-numero = 0
-res = 0
-digitados = 0
-while numero != 999:
-    numero = int(input('Digite um valor: '))
-    res += numero
-    digitados += 1
-print(f'O total de números digitados foi de {digitados - 1} (Sem contar o 999) e a soma entre os números digitados foi de {res - 999}')
+PA = int(input('Digite o primeiro termo: '))
+razao = int(input('Digite a razão: '))
+rep_end = int(input('Quer mostrar quantos termos? '))
+rep = 0
+while rep_end != 0:
+    rep = 0
+    while rep != rep_end:
+        print(PA, end=' -> ')
+        PA = PA + razao
+        rep += 1
+    print('Pausa')
+    rep_end = int(input('Quantos termos mostrar a mais? '))
+print('Acabou!')

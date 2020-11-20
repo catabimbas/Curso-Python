@@ -1,11 +1,8 @@
-# Variável
-soma = 0
-cont = 0
+# Importação
+from time import sleep
 # Repetição
-for c in range(1,501, 2):
-    # IF
-    if c % 3 == 0:
-        cont += 1
-        soma = soma + c
+for c in range(1,10):
+    print(c)
+    sleep(1)
 # Print
-print(f'A soma de todos os valores solicitados é {soma} e teve {cont} números contados')
+print('Ano novo Carai kkkkkkkk')

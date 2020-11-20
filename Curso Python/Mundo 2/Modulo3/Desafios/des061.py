@@ -1,10 +1,8 @@
-fibonacci = int(input('Digite um valor: '))
-mostrar = int(input('Digite quantas vezes quer mostrar: '))
+PA = int(input('Digite o primeiro termo: '))
+razao = int(input('Digite a razão: '))
 rep = 0
-razao = fibonacci + 1
-while rep != mostrar:
-    print(f'{fibonacci} -> {razao}',end=' -> ')
-    fibonacci = fibonacci + razao
-    razao = razao + fibonacci
-    rep = rep + 1
+while rep != 10:
+    rep += 1
+    print(PA,end=' -> ')
+    PA = PA + razao
 print('Acabou!')

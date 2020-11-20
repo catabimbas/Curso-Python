@@ -1,6 +1,6 @@
-salario = float(input('Digite o salário do funcionario: '))
-if salario > 1250:
-    salariot = salario * 10/100
+ano = int(input('Digite o ano: '))
+anonovo = ano % 4
+if anonovo == 0:
+    print('Teste 1')
 else:
-    salariot = salario * 15/100
-print(f'O salário novo do funcionario {salariot}')
+    print('Teste 2')

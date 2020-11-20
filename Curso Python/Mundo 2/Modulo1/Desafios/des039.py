@@ -1,17 +1,21 @@
-# Variável
-idade = int(input('Digite o ano de nascimento: '))
+# Variável int
+dataNascimento = int(input('Informe o ano de nascimento: '))
 # Variáveis
-classificacao = ['Mirim', 'Infantil', 'Junior', 'Sênior', 'Master']
-idade = 2020 - idade
-# IFS
-if idade < 9:
-    print(f"A sua categoria: {classificacao[0]}")
-elif 9 < idade <= 14:
-    print(f"A sua categoria: {classificacao[1]}")
-elif 15 <= idade < 19:
-    print(f"A sua categoria: {classificacao[2]}")
-elif 19 <= idade < 20:
-    print(f"A sua categoria: {classificacao[3]}")
-else:
-    print(f"A sua categoria: {classificacao[4]}")
-
+dataNascimentop = 2020 - dataNascimento
+vaiAlista = "Não"
+temQueAlista = "Não"
+passouAlista = "Não"
+# IFS Print
+if dataNascimentop < 18:
+    vaiAlista = "Sim"
+    print('Você vai se alista em {}'.format(dataNascimento + 18))
+if dataNascimentop == 18:
+    temQueAlista = "Sim"
+    print('Você vai poder se alista esse ano')
+if dataNascimentop > 18:
+    passouAlista = "Sim"
+    print('Você deveria ser alistado a {} atrás'.format(dataNascimento-18))
+# Prints
+print(f"Tu ainda vai se alista? {vaiAlista}")
+print(f"Tá na hora de se alista? {temQueAlista}")
+print(f"Já passou no tempo de se alista? {passouAlista}")

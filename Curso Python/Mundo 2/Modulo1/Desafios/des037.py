@@ -1,21 +1,17 @@
 # Variável int
-dataNascimento = int(input('Informe o ano de nascimento: '))
-# Variáveis
-dataNascimentop = 2020 - dataNascimento
-vaiAlista = "Não"
-temQueAlista = "Não"
-passouAlista = "Não"
-# IFS Print
-if dataNascimentop < 18:
-    vaiAlista = "Sim"
-    print('Você vai se alista em {}'.format(dataNascimento + 18))
-if dataNascimentop == 18:
-    temQueAlista = "Sim"
-    print('Você vai poder se alista esse ano')
-if dataNascimentop > 18:
-    passouAlista = "Sim"
-    print('Você deveria ser alistado a {} atrás'.format(dataNascimento-18))
-# Prints
-print(f"Tu ainda vai se alista? {vaiAlista}")
-print(f"Tá na hora de se alista? {temQueAlista}")
-print(f"Já passou no tempo de se alista? {passouAlista}")
+num = int(input('Digite um número inteiro: '))
+# Opções
+opcoes = int(input("""Escolha uma das bases para conversão
+[ 1 ] Converter para Binário 
+[ 2 ] Converter para OCTAL
+[ 3 ] Converter para HEXADECIMAL
+Sua Opção: """))
+# IFS Opções
+if opcoes == 1:
+    print('{} Convertido pra binário é igual a: {}'.format(num, bin(num)))
+elif opcoes == 2:
+    print('{} Convertido para OCTAL é igual a: {}'.format(num, oct(num)))
+elif opcoes == 3:
+    print('{} Convertido para Hexadecimal é igual a: {}'.format(num, hex(num)))
+else:
+    print('Essa opção não existe')

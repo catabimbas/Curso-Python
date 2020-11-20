@@ -1,14 +1,23 @@
+# Importação
+from random import randint
 # Variável int
-numeroIP = int(input('Digite um número: '))
-# Variável
-numeroT = numeroIP / 2
+print('----------------------')
+print('     Adivinhador')
+print('----------------------')
+numerosort = int(input('Adivinhe qual número vai sair entre 1 e 5: '))
+# Variáveis
+numeroAleatorio = randint(1, 5)
+numeroAleatorio = numeroAleatorio == numerosort
 # Cores
 cor = {'fim': '\033[m',
-       'branco': '\033[30m'}
-# IFS Print
-if numeroT % 1:
-    # Print
-    print(f'O número digitado é {cor["branco"]}impar{cor["fim"]}')
+       'erro': '\033[31m',
+       'verdade': '\033[32m'}
+# IFS
+if numeroAleatorio:
+    # Prints
+    print('{}Parabéns, você acertou!{}'.format(cor['verdade'], cor['fim']))
 else:
-    # Print
-    print(f'O número digitado é {cor["branco"]}par{cor["fim"]}')
+    # Prints
+    print('{}Você errou!{}'.format(cor['erro'], cor['fim']))
+# Print
+print('Tente novamente apertando Shift+F10')

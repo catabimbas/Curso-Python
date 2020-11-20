@@ -1,6 +1,9 @@
-kmviagem = int(input('Quantos Km tem a viagem? '))
-if kmviagem < 200:
-    passagem = kmviagem * 0.50
+velocidade = int(input('Qual velocidade o carro percorreu: '))
+if velocidade > 80:
+    # Váriavel
+    precoMulta = (velocidade - 80) * 7
+    # Print
+    print('O carro está Multado')
+    print('Ele pagará {} reais na multa'.format(precoMulta))
 else:
-    passagem = kmviagem * 0.45
-print('O preço do seu voo fica por {}'.format(passagem))
+    print('Não ultrassou a velocidade máxima')

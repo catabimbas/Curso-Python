@@ -1,17 +1,13 @@
-# Código do curso
-# Importação
-from math import cos, sin, tan, radians
+# Importações
+from math import floor
+# Variável float
+real = float(input('Digite um número real: '))
 # Variável
-angulo = float(input('Digite um ângulo: '))
-# Variáveis
-angulocos = cos(radians(angulo))
-angulosen = sin(radians(angulo))
-angulotan = tan(radians(angulo))
+floreal = floor(real)
 # Cores
 cor = {'fim': '\033[m',
-       'verde': '\033[32m',
-       'amarelo': '\033[33m'}
+       'vermelho': '\033[31m',
+       'verde': '\033[32m'}
 # Print
-print('O ângulo de {}{}{} tem o Seno de {}{:.2f}{}\nO ângulo de {}{}{} tem o Cosseno de {}{:.2f}{}\nO ângulo de {}{}{} tem o Tangente de {}{:.2f}{}'.format(cor['verde'], angulo, cor['fim'], cor['amarelo'], angulosen, cor['fim'],
-                                                                                                                                    cor['verde'], angulo, cor['fim'], cor['amarelo'], angulocos, cor['fim'],
-                                                                                                                                    cor['verde'], angulo, cor['fim'], cor['amarelo'], angulotan, cor['fim']))
+print('O valor {}{}{} na forma inteira fica {}{}{}'.format(cor['vermelho'], real, cor['fim'],
+                                                           cor['verde'], floreal, cor['fim']))

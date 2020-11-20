@@ -1,6 +1,6 @@
-ano = int(input('Digite o ano: '))
-anonovo = ano % 4
-if anonovo == 0:
-    print('Teste 1')
+numeroIP = int(input('Digite um número: '))
+numeroT = numeroIP / 2
+if numeroT % 1:
+    print('O número digitado é impar')
 else:
-    print('Teste 2')
+    print('O número digitado é par')

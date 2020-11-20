@@ -1,12 +1,18 @@
 # Variável int
-kmviagem = int(input('Quantos Km tem a viagem? '))
+velocidade = int(input('Qual velocidade o carro percorreu: '))
 # Cores
 cor = {'fim': '\033[m',
+       'amarelo': '\033[33m',
+       'vermelho': '\033[31m',
        'verde': '\033[32m'}
-# IFS Print
-if kmviagem < 200:
-    passagem = kmviagem * 0.50
+
+# IFS
+if velocidade > 80:
+    # Váriavel
+    precoMulta = (velocidade - 80) * 7
+    # Print
+    print(f'{cor["vermelho"]}O carro está Multado{cor["fim"]}')
+    print(f'{cor["vermelho"]}Ele pagará {cor["amarelo"]}{precoMulta} reais {cor["fim"]}{cor["vermelho"]}na multa{cor["fim"]}')
 else:
-    passagem = kmviagem * 0.45
-# Print
-print(f'O preço da viagem fica por {cor["verde"]}{passagem}{cor["fim"]}')
+    # Print
+    print(f'{cor["verde"]}Não ultrassou a velocidade máxima{cor["fim"]}')

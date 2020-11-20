@@ -1,22 +1,33 @@
-cinquenta = vinte = dez = cinco = um = 0
-sacar = int(input('Que valor você quer sacar? R$'))
+# Variáveis
+dmenor = homens = muieDMaior = 0
+# While
 while True:
-    while sacar >= 50:
-        cinquenta += 1
-        sacar -= 50
-    while sacar >= 20:
-        vinte += 1
-        sacar -= 20
-    while sacar >= 10:
-        dez += 1
-        sacar -= 10
-    while sacar >= 5:
-        cinco += 1
-        sacar -= 5
-    while sacar >= 1:
-        um += 1
-        sacar -= 1
-    print(f'Foi sacado:\n{cinquenta} de cinquenta\n{vinte} de 20\n{dez} de 10\n{cinco} de cinco reais\n{um} de um real')
-    break
-print('===================')
-print('Tenha um bom dia :)')
+    # Variáveis int e string
+    idade = int(input('Digite a idade: '))
+    sexo = str(input('Você é homem ou mulher? [H/M]').upper())
+    # Repetição do sexo
+    while True:
+        if sexo == 'H' or sexo == 'M':
+            break
+        else:
+            sexo = str(input('Você é homem ou mulher? [H/M]').upper())
+    # Repetição da pergunta
+    pergunta = str(input('Quer continuar? [S/N]').upper())
+    while True:
+        if pergunta == 'S' or pergunta == 'N':
+            break
+        else:
+            pergunta = str(input('Quer continuar? [S/N]').upper())
+    # Objetivos
+    if idade < 18:
+        dmenor += 1
+    if sexo == 'H':
+        homens += 1
+    if sexo == 'M' and idade < 20:
+        muieDMaior += 1
+    # Sair ou entrar
+    if pergunta == 'N':
+        break
+print(f'''No total, existe {dmenor} pessoas menores de 18 anos
+No total, a {homens} homens cadastrados
+No total, a {muieDMaior} mulheres menores de 20 anos''')

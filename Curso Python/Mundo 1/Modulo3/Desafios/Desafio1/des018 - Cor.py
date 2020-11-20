@@ -1,19 +1,17 @@
+# Código do curso
 # Importação
-from random import sample
-# Variáveis str
-n1 = str(input('Primeiro aluno: '))
-n2 = str(input('Segundo aluno: '))
-n3 = str(input('Terceiro aluno: '))
-n4 = str(input('Quarto aluno: '))
+from math import cos, sin, tan, radians
+# Variável
+angulo = float(input('Digite um ângulo: '))
 # Variáveis
-lista = [n1, n2, n3, n4]
-escolhido = sample(lista, 4)
+angulocos = cos(radians(angulo))
+angulosen = sin(radians(angulo))
+angulotan = tan(radians(angulo))
 # Cores
 cor = {'fim': '\033[m',
-       'amarelo': '\033[33m',
-       'roxo': '\033[35m',
-       'ciano': '\033[36m',
-       'cinza': '\033[37m'}
-
+       'verde': '\033[32m',
+       'amarelo': '\033[33m'}
 # Print
-print('Os sorteados para apresentarem os trabalhos \nPrimeiro: {}{}{} \nSegundo: {}{}{} \nTerceiro: {}{}{}\nQuarto: {}{}{}'.format(cor['amarelo'], escolhido[0], cor['fim'], cor['roxo'], escolhido[1], cor['fim'], cor['ciano'], escolhido[2], cor['fim'], cor['cinza'], escolhido[3], cor['fim']))
+print('O ângulo de {}{}{} tem o Seno de {}{:.2f}{}\nO ângulo de {}{}{} tem o Cosseno de {}{:.2f}{}\nO ângulo de {}{}{} tem o Tangente de {}{:.2f}{}'.format(cor['verde'], angulo, cor['fim'], cor['amarelo'], angulosen, cor['fim'],
+                                                                                                                                    cor['verde'], angulo, cor['fim'], cor['amarelo'], angulocos, cor['fim'],
+                                                                                                                                    cor['verde'], angulo, cor['fim'], cor['amarelo'], angulotan, cor['fim']))

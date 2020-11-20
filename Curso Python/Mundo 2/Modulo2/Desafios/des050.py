@@ -1,16 +1,10 @@
-# Variável int
-num = int(input('Digite um número: '))
 # Variável
-analisa_primo = 0
+soma = 0
 # Repetição
-for c in range(1,num+1):
-    print(c, end=' ')
+for c in range(1, 7):
+    num = int(input('Digite um número: '))
     # IF
-    if num % c == 0:
-        analisa_primo += 1
+    if num % 2 == 0:
+        soma += num
 # Print
-print(f'\nO número {num} foi dividido {analisa_primo} vezes')
-if analisa_primo <= 2:
-    print('E por isso ele é Primo!')
-else:
-    print('E por isso ele não é Primo!')
+print(f'O valor somado é igual a {soma}')

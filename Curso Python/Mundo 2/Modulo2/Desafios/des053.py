@@ -1,40 +1,14 @@
-# Meu Código
-"""
+# Variável string
+polindromo = str(input('Digite uma frase: '))
 # Variáveis
-peso_menor = 0
-peso_maior = 0
+palavras = polindromo.split()
+junto = ''.join(polindromo)
+inverso = ''
 # Repetição
-for c in range(1, 6):
-    # Variável float
-    peso = float(input(f'Digite o {c+1}º Peso: '))
-    # IFS
-    if c == 0:
-        peso_maior = peso_menor = peso
-    if peso > peso_maior:
-        peso_maior = peso
-    elif peso < peso_menor:
-        peso_menor = peso
-# Print
-print(f'''O prêmio de baleia foi de {peso_maior}
-O prêmio de peso pena {peso_menor}''')
-"""
-# Código do curso
-
-peso_menor = 0
-peso_maior = 0
-# Repetição
-for c in range(1, 6):
-    # Variável float
-    peso = float(input(f'Digite o {c}º Peso: '))
-    # IFS
-    if c == 1:
-        maior = peso
-        menor = peso
-    else:
-        if peso > peso_maior:
-            peso_maior = peso
-        if peso < peso_menor:
-            peso_menor = peso
-# Print
-print(f'''O prêmio de baleia foi de {peso_maior}
-O prêmio de peso pena {peso_menor}''')
+for letra in range(len(junto) -1, -1, -1):
+    inverso += junto[letra]
+# IF
+if inverso.capitalize() != junto.capitalize():
+    print('Ele não é polindromo')
+else:
+    print('Ele é polindromo')

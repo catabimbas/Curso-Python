@@ -1,14 +1,24 @@
+# Meu código
+"""
+from math import sqrt
+co = float(input('Digite um valor pro cateto oposto: '))
+ca = float(input('Digite um valor pro cateto adjacente: '))
+co2 = co * co
+ca2 = ca * ca
+rqm = (ca2 + co2)
+rq = sqrt(rqm)
+print("O valor da hipotenusa é de {:.2f}".format(rq))
+"""
+# Código do curso
 # Importação
-from random import choice
-# Variáveis str
-n1 = str(input('Primeiro aluno: '))
-n2 = str(input('Segundo aluno: '))
-n3 = str(input('Terceiro aluno: '))
-n4 = str(input('Quarto aluno: '))
+from math import hypot
+# Variáveis float
+co = float(input('Comprimento do cateto oposto: '))
+ca = float(input('Comprimento do cateto adjacente: '))
 # Variáveis
-lista = [n1, n2, n3, n4]
-escolhido = choice(lista)
+h1 = hypot(co, ca)
 # Cores
 cor = {'fim': '\033[m',
-       'amarelo': '\033[33m'}
-print('{}{}{}'.format(cor['amarelo'], escolhido, cor['fim']))
+       'ciano': '\033[36m'}
+# Print
+print('A hipotenusa vai medir {}{:.2f}{}'.format(cor['ciano'], h1, cor['fim']))
